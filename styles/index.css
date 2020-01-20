@@ -4,14 +4,8 @@ body {
 }
 
   @keyframes spincube {
-    from,to {
-      transform: rotateX(45deg) rotateY(45deg);
-    }
-    50% {
-      transform: rotateX(45deg) rotateY(360deg);
-    }
-    100% {
-      transform: rotateX(45deg) rotateY(45deg);
+    to {
+      transform: rotateY(360deg);
     }
   }
 
@@ -44,22 +38,22 @@ body {
   }
 
   .cubespinner .face1 {
-    transform: translateZ(120px);
+    transform: rotateX(-54.7356deg) rotateY(45deg) translateZ(120px);
   }
   .cubespinner .face2 {
-    transform: rotateY(90deg) translateZ(120px);
+    transform: rotateX(-54.7356deg) rotateY(135deg) translateZ(120px);
   }
   .cubespinner .face3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(120px);
+    transform: rotateX(-54.7356deg) rotateY(225deg) translateZ(120px);
   }
   .cubespinner .face4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(120px);
+    transform: rotateX(-54.7356deg) rotateY(315deg) translateZ(120px);
   }
   .cubespinner .face5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(120px);
+    transform: rotateX(35.2644deg) rotateZ(-45deg) translateZ(120px);
   }
   .cubespinner .face6 {
-    transform: rotateX(-90deg) translateZ(120px);
+    transform: rotateX(35.2644deg) rotateY(180deg) rotateZ(-45deg) translateZ(120px);
   }
 
 .actions-box {
