@@ -3,6 +3,10 @@ body {
   font-family: "arial", serif;
 }
 
+.main {
+  height: 100%;
+}
+
   @keyframes spincube {
     to {
       transform: rotateY(360deg);
@@ -12,11 +16,12 @@ body {
   .cubespinner {
     animation-name: spincube;
     animation-iteration-count: infinite;
-    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-duration: 15s;
 
     transform-style: preserve-3d;
 
-    transform-origin: 120px 120px 0;
+    transform-origin: 133px 133px 0;
   }
 
   .stage {
@@ -34,7 +39,6 @@ body {
     height: 240px;
     border: 10px solid #2b2b2b;
     border-radius: 15px;
-    font-size: 0;
   }
 
   .cubespinner .face1 {
@@ -60,11 +64,15 @@ body {
   display: flex;
   width: 1100px;
   height: 600px;
-  position: absolute;
+  position: relative;
   top: calc(50% - 300px);
   left: 50%;
   transform: translate(-50%);
   background-color: yellow;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  padding: 25px;
+  box-sizing: border-box;
 }
 
 .actions-box__left,
@@ -73,7 +81,7 @@ body {
   height: 100%;
 }
 
-.actions-box__form {
+.actions-box__right-wrapper {
   position: relative;
   width: 300px;
   top: calc(50% - 120px);
@@ -81,8 +89,44 @@ body {
   transform: translate(-50%);
 }
 
+.actions-box__register .actions-box__right-wrapper {
+  width: auto;
+}
+
+.actions-box__headline {
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.actions-box__form {
+  margin-bottom: 50px;
+}
+
+.actions-box__register .actions-box__form {
+  margin: auto;
+  max-width: 80%;
+}
+
+.actions-box__login {
+  flex-direction: column;
+}
+
+.actions-box__account {
+  margin-left: 5px;
+}
+
 .actions-box__inputs {
   margin-bottom: 15px;
+}
+
+.actions-box__register .actions-box__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.actions-box__register .actions-box__input-wrapper {
+  width: 47.5%;
 }
 
 .actions-box__label {
@@ -103,6 +147,10 @@ body {
 
 .actions-box__text-input:focus {
   outline: none;
+}
+
+.actions-box__account-link {
+  text-decoration: none;
 }
 
 .actions-box__button {
